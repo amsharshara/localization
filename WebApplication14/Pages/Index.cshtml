@@ -1,0 +1,22 @@
+﻿
+@page
+@using Microsoft.Extensions.Localization;
+@using WebApplication14.Resources;
+@model IndexModel
+@inject IStringLocalizer<SharedResourse> sl;
+@{
+    ViewData["Title"] = "Home page";
+    var msg = sl["First"].Value;
+}
+ 
+<div class="text-center">
+    <h1>@msg</h1>
+     <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<form method="post" asp-page-handler="ar">
+    <button type="submit">AR</button>
+</form>
+    <form method="post" asp-page-handler="en">
+        <button type="submit">EN</button>
+    </form>
+</div>

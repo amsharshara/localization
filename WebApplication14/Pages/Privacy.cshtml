@@ -1,0 +1,14 @@
+﻿@page
+@using Microsoft.Extensions.Localization;
+@using WebApplication14.Resources;
+@model PrivacyModel
+@inject IStringLocalizer<SharedResourse> sr;
+@{
+    ViewData["Title"] = "Privacy Policy";
+    var msg = sr["First"].Value;
+}
+<h1>@msg</h1>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
